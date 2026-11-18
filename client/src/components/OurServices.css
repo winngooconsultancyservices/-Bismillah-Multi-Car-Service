@@ -1,0 +1,197 @@
+/* Services Section Wrapper */
+.services-section {
+  padding: 60px 0 80px 0;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.services-section .section-header {
+  margin-bottom: 38px;
+}
+
+.services-section .section-subtitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--secondary-blue);
+  letter-spacing: -0.01em;
+}
+
+/* Auto-Scrolling Horizontal Marquee Container */
+.services-marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 16px 0 28px 0;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 5%,
+    rgba(0, 0, 0, 1) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 5%,
+    rgba(0, 0, 0, 1) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* The continuous moving track */
+.services-marquee-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: autoScrollServices 28s linear infinite;
+  will-change: transform;
+}
+
+/* Pause scroll when hovering over the track or any card */
+.services-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Infinite Horizontal Scroll Keyframe */
+@keyframes autoScrollServices {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Blue Service Card */
+.service-card-blue {
+  width: 275px;
+  min-width: 275px;
+  background: linear-gradient(145deg, #0747A6 0%, #0969DA 100%);
+  color: #FFFFFF;
+  border-radius: 16px;
+  padding: 26px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(9, 105, 218, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  user-select: none;
+}
+
+.service-card-blue:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: linear-gradient(145deg, #063A89 0%, #0856B2 100%);
+  box-shadow: 0 16px 36px rgba(9, 105, 218, 0.38);
+}
+
+/* Service Icon Box */
+.service-icon-box-blue {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.service-card-blue:hover .service-icon-box-blue {
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* Service Title */
+.service-title-blue {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Service Small Description */
+.service-desc-blue {
+  font-size: 0.85rem;
+  color: #D2E3FC;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  min-height: 52px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Book Service Button */
+.service-book-btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  color: #0969DA;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 9px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.service-book-btn-white:hover {
+  background-color: #EAF3FF;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.16);
+}
+
+/* Responsive adjustments */
+@media (max-width: 860px) {
+  .services-section {
+    padding: 44px 0 60px 0;
+  }
+
+  .service-card-blue {
+    width: 240px;
+    min-width: 240px;
+    padding: 22px 16px 20px 16px;
+  }
+
+  .service-icon-box-blue {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 14px;
+  }
+
+  .service-title-blue {
+    font-size: 1.05rem;
+    min-height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .service-desc-blue {
+    font-size: 0.8rem;
+    min-height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .services-marquee-track {
+    animation-duration: 22s;
+    gap: 16px;
+  }
+}

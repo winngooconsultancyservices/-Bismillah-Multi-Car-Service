@@ -1,0 +1,140 @@
+.how-it-works-section {
+  background-color: var(--bg-page);
+  position: relative;
+}
+
+.timeline-container {
+  position: relative;
+  margin-bottom: 56px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50px;
+  left: 5%;
+  right: 5%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--light-blue) 0%, var(--secondary-blue) 50%, var(--light-blue) 100%);
+  z-index: 1;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-card {
+  padding: 32px 24px 26px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.step-num-badge {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--secondary-blue);
+  background: var(--light-blue);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 10px rgba(9, 105, 218, 0.15);
+}
+
+.step-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--primary-navy);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-title {
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 12px;
+}
+
+.step-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.step-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--secondary-blue);
+  background: var(--light-blue);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.step-meta-icon {
+  flex-shrink: 0;
+}
+
+.how-cta-banner {
+  background: var(--primary-navy);
+  color: #FFFFFF;
+  padding: 32px 40px;
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.2);
+}
+
+.how-cta-text h4 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.how-cta-text p {
+  color: #C4D3E8;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1080px) {
+  .timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .timeline-line {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+  .how-cta-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 24px;
+  }
+}
