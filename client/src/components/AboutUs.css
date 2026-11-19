@@ -1,25 +1,25 @@
 /* About Us Section */
 .about-section {
   background-color: #FFFFFF;
-  padding: 70px 0 90px 0;
+  padding: clamp(44px, 5.5vw, 68px) 0;
 }
 
 /* Showcase Card matching user reference */
 .about-showcase-card {
   display: flex;
   background-color: #FFFFFF;
-  border-radius: 20px;
+  border-radius: 18px;
   border: 1px solid #DCE5F2;
-  box-shadow: 0 10px 32px rgba(11, 31, 58, 0.07);
+  box-shadow: 0 8px 28px rgba(11, 31, 58, 0.06);
   overflow: hidden;
   position: relative;
-  min-height: 480px;
+  min-height: 420px;
 }
 
 /* Left Content Column */
 .about-showcase-content {
   flex: 1.05;
-  padding: 50px 48px;
+  padding: clamp(28px, 3.8vw, 44px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .about-label-line {
@@ -43,7 +43,7 @@
 }
 
 .about-label-text {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   color: #0969DA;
@@ -52,20 +52,20 @@
 
 /* Main Heading */
 .about-showcase-heading {
-  font-size: 2.35rem;
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
   font-weight: 800;
   color: #0B1F3A;
-  line-height: 1.2;
+  line-height: 1.22;
   letter-spacing: -0.02em;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 /* Subtitle Description */
 .about-showcase-desc {
-  font-size: 1.05rem;
+  font-size: clamp(0.92rem, 1.2vw, 1.02rem);
   color: #5E6C84;
   line-height: 1.65;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   max-width: 480px;
 }
 
@@ -74,22 +74,22 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 34px;
+  gap: 12px;
+  margin-bottom: 28px;
 }
 
 .about-checklist-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 0.98rem;
+  gap: 10px;
+  font-size: 0.94rem;
   font-weight: 700;
   color: #0B1F3A;
 }
 
 .about-check-bullet {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: #0969DA;
   color: #FFFFFF;
@@ -104,22 +104,22 @@
 .about-cta-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background-color: #0969DA;
   color: #FFFFFF;
-  font-size: 0.98rem;
+  font-size: 0.94rem;
   font-weight: 700;
-  padding: 13px 30px;
+  padding: 11px 26px;
   border-radius: 9999px;
   width: fit-content;
-  box-shadow: 0 4px 16px rgba(9, 105, 218, 0.35);
+  box-shadow: 0 4px 14px rgba(9, 105, 218, 0.35);
   transition: all 0.22s ease;
 }
 
 .about-cta-btn:hover {
   background-color: #0856B2;
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(9, 105, 218, 0.45);
+  box-shadow: 0 6px 20px rgba(9, 105, 218, 0.45);
 }
 
 /* Right Visual Column with Angled Cut */
@@ -128,7 +128,7 @@
   position: relative;
   overflow: hidden;
   background-color: #F4F7FC;
-  min-height: 480px;
+  min-height: 420px;
 }
 
 /* Decorative Blue Gradient Accent Stripe on Seam */

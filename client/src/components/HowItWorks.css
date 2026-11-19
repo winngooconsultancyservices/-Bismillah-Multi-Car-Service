@@ -5,12 +5,12 @@
 
 .timeline-container {
   position: relative;
-  margin-bottom: 56px;
+  margin-bottom: clamp(32px, 4vw, 44px);
 }
 
 .timeline-line {
   position: absolute;
-  top: 50px;
+  top: 44px;
   left: 5%;
   right: 5%;
   height: 3px;
@@ -21,13 +21,13 @@
 .timeline-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: clamp(16px, 2vw, 22px);
   position: relative;
   z-index: 2;
 }
 
 .timeline-card {
-  padding: 32px 24px 26px 24px;
+  padding: clamp(20px, 2.5vw, 26px);
   display: flex;
   flex-direction: column;
 }
@@ -36,27 +36,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .step-num-badge {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--secondary-blue);
   background: var(--light-blue);
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid #FFFFFF;
-  box-shadow: 0 4px 10px rgba(9, 105, 218, 0.15);
+  box-shadow: 0 3px 8px rgba(9, 105, 218, 0.15);
 }
 
 .step-icon-box {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--radius-md);
   background: var(--primary-navy);
   color: #FFFFFF;
@@ -66,29 +66,29 @@
 }
 
 .step-title {
-  font-size: 1.22rem;
+  font-size: clamp(1.05rem, 1.4vw, 1.15rem);
   font-weight: 800;
   color: var(--primary-navy);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .step-desc {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   flex-grow: 1;
 }
 
 .step-meta {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
+  gap: 6px;
+  font-size: 0.78rem;
   font-weight: 700;
   color: var(--secondary-blue);
   background: var(--light-blue);
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: var(--radius-sm);
 }
 
@@ -99,23 +99,23 @@
 .how-cta-banner {
   background: var(--primary-navy);
   color: #FFFFFF;
-  padding: 32px 40px;
-  border-radius: var(--radius-xl);
+  padding: clamp(22px, 3.2vw, 30px);
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.2);
+  box-shadow: 0 12px 28px rgba(11, 31, 58, 0.18);
 }
 
 .how-cta-text h4 {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
   font-weight: 800;
   margin-bottom: 4px;
 }
 
 .how-cta-text p {
   color: #C4D3E8;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 1.1vw, 0.92rem);
 }
 
 @media (max-width: 1080px) {

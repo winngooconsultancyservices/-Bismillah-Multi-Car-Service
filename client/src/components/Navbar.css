@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 84px;
+  height: 70px;
 }
 
 .nav-brand {
@@ -28,25 +28,25 @@
 }
 
 .nav-brand-logo {
-  height: 64px;
+  height: 48px;
   width: auto;
-  max-width: 210px;
+  max-width: 180px;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 2px 5px rgba(11, 31, 58, 0.18));
+  filter: drop-shadow(0 2px 4px rgba(11, 31, 58, 0.15));
   transition: transform var(--transition-fast);
 }
 
 .nav-brand:hover .nav-brand-logo {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .mobile-brand-logo {
-  height: 52px;
+  height: 44px;
   width: auto;
-  max-width: 170px;
+  max-width: 150px;
   object-fit: contain;
-  filter: drop-shadow(0 2px 5px rgba(11, 31, 58, 0.18));
+  filter: drop-shadow(0 2px 4px rgba(11, 31, 58, 0.15));
 }
 
 .brand-icon-box {
