@@ -71,8 +71,7 @@ export const Navbar = ({ config }) => {
             onClick={(e) => handleLinkClick(e, '#booking')}
             className="btn btn-primary nav-book-btn"
           >
-            <span className="btn-label-full">Book Service</span>
-            <span className="btn-label-short">Book</span>
+            <span>Book Service</span>
           </a>
 
           {/* Mobile Menu Hamburger */}

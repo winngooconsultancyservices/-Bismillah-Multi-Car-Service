@@ -244,23 +244,6 @@
   width: 100%;
 }
 
-.btn-label-short {
-  display: none;
-}
-
-.btn-label-full {
-  display: inline;
-}
-
-@media (max-width: 480px) {
-  .btn-label-full {
-    display: none;
-  }
-  .btn-label-short {
-    display: inline;
-  }
-}
-
 @media (max-width: 960px) {
   .desktop-nav {
     display: none;
