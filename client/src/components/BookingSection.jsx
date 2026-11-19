@@ -405,7 +405,7 @@ export const BookingSection = ({ selectedService, config, onBookingSuccess }) =>
                 </a>
 
                 <a
-                  href={`https://mail.google.com/mail/?view=cm&to=${config?.business_email || 'Bismillahmulticarservice786@gmail.com'}&su=Car Service Enquiry`}
+                  href={`https://mail.google.com/mail/?view=cm&to=${config?.business_email || 'mohammedazar589@gmail.com'}&su=Car Service Enquiry`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-row"
@@ -415,7 +415,7 @@ export const BookingSection = ({ selectedService, config, onBookingSuccess }) =>
                   </div>
                   <div>
                     <span className="contact-type">Email Support</span>
-                    <strong className="contact-value">{config?.business_email || 'Bismillahmulticarservice786@gmail.com'}</strong>
+                    <strong className="contact-value">{config?.business_email || 'mohammedazar589@gmail.com'}</strong>
                   </div>
                 </a>
 

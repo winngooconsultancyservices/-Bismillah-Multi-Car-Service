@@ -90,9 +90,9 @@ export const Footer = ({ config, onSelectService }) => {
                 <span>{config?.business_phone || '+91 98407 35842'}</span>
               </a>
 
-              <a href={`mailto:${config?.business_email || 'Bismillahmulticarservice786@gmail.com'}`} className="footer-contact-item">
+              <a href={`mailto:${config?.business_email || 'mohammedazar589@gmail.com'}`} className="footer-contact-item">
                 <Mail size={16} className="f-icon" />
-                <span>{config?.business_email || 'Bismillahmulticarservice786@gmail.com'}</span>
+                <span>{config?.business_email || 'mohammedazar589@gmail.com'}</span>
               </a>
 
               <div className="footer-contact-item static">
@@ -106,7 +106,7 @@ export const Footer = ({ config, onSelectService }) => {
         {/* Footer Bottom Bar */}
         <div className="footer-bottom">
           <p className="copyright-text">
-            © {new Date().getFullYear()} Bismillah Multi Car Service. All rights reserved. 
+            Â© {new Date().getFullYear()} Bismillah Multi Car Service. All rights reserved. 
             Dedicated 100% Doorstep Automotive Care.
           </p>
         </div>

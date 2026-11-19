@@ -28,9 +28,9 @@
 }
 
 .nav-brand-logo {
-  height: 48px;
+  height: 50px;
   width: auto;
-  max-width: 180px;
+  max-width: 200px;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 2px 4px rgba(11, 31, 58, 0.15));
@@ -42,9 +42,9 @@
 }
 
 .mobile-brand-logo {
-  height: 44px;
+  height: 46px;
   width: auto;
-  max-width: 150px;
+  max-width: 170px;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(11, 31, 58, 0.15));
 }

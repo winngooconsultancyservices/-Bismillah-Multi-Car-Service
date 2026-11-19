@@ -4,7 +4,7 @@ import { Setting } from '../models/Setting.js';
 const DEFAULT_CONFIG = {
   business_whatsapp: process.env.BUSINESS_WHATSAPP_NUMBER || '919840735842',
   business_phone: process.env.BUSINESS_PHONE || '+91 98407 35842',
-  business_email: process.env.BUSINESS_EMAIL || 'Bismillahmulticarservice786@gmail.com',
+  business_email: process.env.BUSINESS_EMAIL || 'mohammedazar589@gmail.com',
   working_hours: '24/7',
   service_areas: [
     { id: '1', name: 'Downtown & Central Metro', eta: '30-45 mins', active: true },
