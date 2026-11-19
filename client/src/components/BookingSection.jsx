@@ -16,7 +16,6 @@ import {
   CheckCircle2,
   Headphones
 } from 'lucide-react';
-import { api } from '../utils/api.js';
 import './BookingSection.css';
 
 const CAR_BRANDS = [
@@ -112,7 +111,7 @@ export const BookingSection = ({ selectedService, config, onBookingSuccess }) =>
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) {
       setErrorMessage('Please fix highlighted fields before submitting.');
@@ -122,38 +121,48 @@ export const BookingSection = ({ selectedService, config, onBookingSuccess }) =>
     setLoading(true);
     setErrorMessage('');
 
-    try {
-      // Step 1 & 2: Validate and save booking details to MongoDB through backend API
-      const result = await api.createBooking(formData);
+    // Build WhatsApp message from form data
+    const message = [
+      '🚗 *New Car Service Booking Enquiry*',
+      '━━━━━━━━━━━━━━━━━━━━',
+      `👤 *Customer Name:* ${formData.customerName}`,
+      `📞 *Mobile Number:* ${formData.mobileNumber}`,
+      `📍 *Location / Address:* ${formData.customerLocation}`,
+      `🚘 *Car Brand:* ${formData.carBrand}`,
+      formData.carModel ? `🔧 *Car Model & Year:* ${formData.carModel}` : '',
+      `🛠️ *Required Service:* ${formData.requiredService}`,
+      formData.preferredDate ? `📅 *Preferred Date:* ${formData.preferredDate}` : '',
+      formData.preferredTime ? `⏰ *Preferred Time:* ${formData.preferredTime}` : '',
+      formData.additionalDetails ? `📝 *Additional Details:* ${formData.additionalDetails}` : '',
+      '━━━━━━━━━━━━━━━━━━━━',
+      '_Sent via Bismillah Multi Car Service Website_',
+    ]
+      .filter(Boolean)
+      .join('\n');
 
-      if (result.success) {
-        // Step 3 & 4: Successful booking created with unique Booking ID
-        if (onBookingSuccess) {
-          onBookingSuccess(result);
-        }
+    const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
 
-        // Reset form
-        setFormData({
-          customerName: '',
-          mobileNumber: '',
-          customerLocation: '',
-          carBrand: '',
-          carModel: '',
-          requiredService: '',
-          preferredDate: '',
-          preferredTime: '',
-          additionalDetails: '',
-        });
-      } else {
-        setErrorMessage(result.message || 'Failed to submit booking. Please try again.');
-      }
-    } catch (err) {
-      console.error('Booking submission error:', err);
-      const msg = err.response?.data?.message || 'Server connection error. Please verify backend is running.';
-      setErrorMessage(msg);
-    } finally {
-      setLoading(false);
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+
+    // Notify parent and reset form
+    if (onBookingSuccess) {
+      onBookingSuccess({ success: true, bookingId: `BK${Date.now()}` });
     }
+
+    setFormData({
+      customerName: '',
+      mobileNumber: '',
+      customerLocation: '',
+      carBrand: '',
+      carModel: '',
+      requiredService: '',
+      preferredDate: '',
+      preferredTime: '',
+      additionalDetails: '',
+    });
+
+    setLoading(false);
   };
 
   const whatsappNumber = config?.business_whatsapp || '919840735842';
