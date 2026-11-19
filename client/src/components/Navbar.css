@@ -116,6 +116,15 @@
   width: 100%;
 }
 
+.nav-item.active {
+  color: var(--secondary-blue);
+  font-weight: 700;
+}
+
+.nav-item.active::after {
+  width: 100%;
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
@@ -230,6 +239,13 @@
 
 .mobile-nav-item:hover {
   color: var(--secondary-blue);
+}
+
+.mobile-nav-item.active {
+  color: var(--secondary-blue);
+  font-weight: 700;
+  border-bottom-color: var(--secondary-blue);
+  padding-left: 8px;
 }
 
 .mobile-drawer-footer {

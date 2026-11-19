@@ -5,14 +5,7 @@ import './Navbar.css';
 export const Navbar = ({ config }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 15);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [activeSection, setActiveSection] = useState('#home');
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -23,12 +16,60 @@ export const Navbar = ({ config }) => {
     { name: 'Contact', href: '#booking' },
   ];
 
+  useEffect(() => {
+    const sectionIds = ['home', 'services', 'about', 'how-it-works', 'why-us', 'booking'];
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 15);
+
+      // Check if user is scrolled to the very bottom of the page
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 60) {
+        setActiveSection('#booking');
+        return;
+      }
+      // Check if user is at the very top of the page
+      if (window.scrollY < 120) {
+        setActiveSection('#home');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Intersection Observer to detect currently visible section smoothly
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -55% 0px',
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(`#${entry.target.id}`);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
+  }, []);
+
   const handleLinkClick = (e, href) => {
     e.preventDefault();
+    setActiveSection(href);
     setMobileMenuOpen(false);
     const target = document.querySelector(href);
     if (target) {
-      const headerOffset = 80;
+      const headerOffset = 76;
       const elementPosition = target.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
       window.scrollTo({
@@ -57,7 +98,7 @@ export const Navbar = ({ config }) => {
               key={link.name}
               href={link.href}
               onClick={(e) => handleLinkClick(e, link.href)}
-              className="nav-item"
+              className={`nav-item ${activeSection === link.href ? 'active' : ''}`}
             >
               {link.name}
             </a>
@@ -110,7 +151,7 @@ export const Navbar = ({ config }) => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className="mobile-nav-item"
+                className={`mobile-nav-item ${activeSection === link.href ? 'active' : ''}`}
               >
                 {link.name}
               </a>
