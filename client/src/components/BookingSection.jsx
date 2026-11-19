@@ -404,7 +404,12 @@ export const BookingSection = ({ selectedService, config, onBookingSuccess }) =>
                   </div>
                 </a>
 
-                <a href={`mailto:${config?.business_email || 'Bismillahmulticarservice786@gmail.com'}`} className="contact-row">
+                <a
+                  href={`https://mail.google.com/mail/?view=cm&to=${config?.business_email || 'Bismillahmulticarservice786@gmail.com'}&su=Car Service Enquiry`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-row"
+                >
                   <div className="contact-icon-box">
                     <Mail size={18} />
                   </div>
