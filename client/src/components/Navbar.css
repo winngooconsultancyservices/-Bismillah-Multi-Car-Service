@@ -244,12 +244,34 @@
   width: 100%;
 }
 
+.btn-label-short {
+  display: none;
+}
+
+.btn-label-full {
+  display: inline;
+}
+
+@media (max-width: 480px) {
+  .btn-label-full {
+    display: none;
+  }
+  .btn-label-short {
+    display: inline;
+  }
+}
+
 @media (max-width: 960px) {
   .desktop-nav {
     display: none;
   }
   .mobile-toggle {
     display: block;
+  }
+  .nav-book-btn {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+    white-space: nowrap;
   }
 }
 
@@ -268,16 +290,32 @@
     height: 34px;
   }
   .nav-book-btn {
-    padding: 8px 12px;
-    font-size: 0.8rem;
+    padding: 7px 10px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    border-radius: 8px;
   }
   .nav-brand-logo {
-    height: 48px;
-    max-width: 160px;
+    height: 44px;
+    max-width: 140px;
   }
   .mobile-drawer-content {
     width: 88%;
     max-width: 320px;
     padding: 20px 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-book-btn {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+  }
+  .nav-brand-logo {
+    height: 38px;
+    max-width: 120px;
+  }
+  .nav-main {
+    height: 58px;
   }
 }
