@@ -195,4 +195,16 @@
     align-items: flex-start;
     padding: 18px;
   }
+  .area-search-box {
+    margin-bottom: 28px;
+  }
+  .search-input-group {
+    padding: 8px 14px;
+  }
+  .area-card {
+    padding: 20px 16px;
+  }
+  .area-name {
+    font-size: 1.05rem;
+  }
 }

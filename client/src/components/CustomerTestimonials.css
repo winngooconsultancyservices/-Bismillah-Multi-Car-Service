@@ -102,3 +102,15 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    padding: 22px 16px;
+  }
+  .testimonial-text {
+    font-size: 0.92rem;
+  }
+  .author-name {
+    font-size: 0.98rem;
+  }
+}

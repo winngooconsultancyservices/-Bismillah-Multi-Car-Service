@@ -255,17 +255,29 @@
 
 @media (max-width: 600px) {
   .nav-main {
-    height: 68px;
+    height: 64px;
   }
   .brand-name {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
+  }
+  .brand-sub {
+    font-size: 0.6rem;
   }
   .brand-icon-box {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
   }
   .nav-book-btn {
-    padding: 8px 14px;
-    font-size: 0.82rem;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  .nav-brand-logo {
+    height: 48px;
+    max-width: 160px;
+  }
+  .mobile-drawer-content {
+    width: 88%;
+    max-width: 320px;
+    padding: 20px 18px;
   }
 }

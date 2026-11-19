@@ -219,3 +219,20 @@
     height: 48px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-banner-title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  .hero-banner-desc {
+    font-size: 0.93rem;
+  }
+  .hero-banner-inner {
+    padding: 36px 0 40px 0;
+  }
+  .btn-hero-solid, .btn-hero-glass {
+    font-size: 0.95rem;
+    padding: 13px 20px;
+  }
+}

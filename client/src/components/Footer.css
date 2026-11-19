@@ -207,13 +207,32 @@
 
 @media (max-width: 600px) {
   .site-footer {
-    padding: 56px 0 28px 0;
+    padding: 48px 0 24px 0;
   }
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
   .brand-col {
     order: -1;
+  }
+  .footer-brand-logo {
+    height: 60px;
+    max-width: 190px;
+  }
+  .footer-heading {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+  .footer-contact-item {
+    font-size: 0.85rem;
+  }
+  .footer-bottom {
+    gap: 8px;
+    padding-top: 24px;
+  }
+  .copyright-text, .footer-disclaimer {
+    font-size: 0.78rem;
+    text-align: center;
   }
 }

@@ -267,14 +267,47 @@
 
 @media (max-width: 600px) {
   .booking-form-card {
-    padding: 24px 18px;
+    padding: 22px 16px;
   }
   .form-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 14px;
+  }
+  .form-group.full-width {
+    grid-column: 1;
   }
   .btn-submit-booking {
     font-size: 0.98rem;
     padding: 14px;
+  }
+  .contact-summary-card {
+    padding: 22px 16px;
+  }
+  .contact-row {
+    padding: 12px;
+  }
+  .contact-icon-box {
+    width: 38px;
+    height: 38px;
+  }
+  .contact-value {
+    font-size: 0.88rem;
+    word-break: break-word;
+  }
+  .sidebar-card-title {
+    font-size: 1.1rem;
+  }
+  .form-heading {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .booking-form-card {
+    padding: 18px 12px;
+  }
+  .form-input, .form-select, .form-textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
   }
 }
