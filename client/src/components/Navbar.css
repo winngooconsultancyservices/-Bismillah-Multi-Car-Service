@@ -4,7 +4,7 @@
   z-index: 999;
   width: 100%;
   background: #0B1F3A;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid #FFFFFF;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   transition: all var(--transition-fast);
 }
@@ -12,7 +12,7 @@
 .navbar-header.scrolled {
   background: #0B1F3A;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
-  border-bottom-color: rgba(9, 105, 218, 0.4);
+  border-bottom: 1px solid #FFFFFF;
 }
 
 .nav-main {
